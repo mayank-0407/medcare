@@ -1,0 +1,1171 @@
+<article>
+
+    <!-- 
+      - #HERO
+    -->
+
+    <section class="section hero" id="home" aria-label="home">
+      <div class="container">
+
+        <ul class="hero-list">
+
+          <li>
+            <div class="hero-card">
+
+              <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
+                <img src="./assets/images/hero-product-1.jpg" width="285" height="396" alt="Art Deco Home"
+                  class="img-cover">
+              </figure>
+
+              <div class="card-content">
+                <h3>
+                  <a href="#" class="card-title">Art Deco Home</a>
+                </h3>
+
+                <p class="card-text">Decoration</p>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="colspan-2">
+            <div class="hero-card">
+
+              <figure class="card-banner img-holder" style="--width: 568; --height: 389;">
+                <img src="./assets/images/hero-product-2.jpg" width="568" height="389" alt="Helen Chair"
+                  class="img-cover">
+              </figure>
+
+              <div class="card-content">
+                <h3>
+                  <a href="#" class="card-title">Helen Chair</a>
+                </h3>
+
+                <p class="card-text">Decoration</p>
+              </div>
+
+            </div>
+          </li>
+
+          <li>
+            <div class="hero-card">
+
+              <figure class="card-banner img-holder" style="--width: 285; --height: 396;">
+                <img src="./assets/images/hero-product-3.jpg" width="285" height="396" alt="Vase Of Flowers"
+                  class="img-cover">
+              </figure>
+
+              <div class="card-content">
+                <h3>
+                  <a href="#" class="card-title">Vase Of Flowers</a>
+                </h3>
+
+                <p class="card-text">Decoration</p>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="colspan-2">
+            <div class="hero-card">
+
+              <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
+                <img src="./assets/images/hero-product-4.jpg" width="580" height="213" alt="Wood Eggs"
+                  class="img-cover">
+              </figure>
+
+              <div class="card-content">
+                <h3>
+                  <a href="#" class="card-title">Wood Eggs</a>
+                </h3>
+
+                <p class="card-text">Decoration</p>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="colspan-2">
+            <div class="hero-card">
+
+              <figure class="card-banner img-holder" style="--width: 580; --height: 213;">
+                <img src="./assets/images/hero-product-5.jpg" width="580" height="213" alt="Table Wood Pine"
+                  class="img-cover">
+              </figure>
+
+              <div class="card-content">
+                <h3>
+                  <a href="#" class="card-title">Table Wood Pine</a>
+                </h3>
+
+                <p class="card-text">Furniture</p>
+              </div>
+
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+
+
+
+    <!-- 
+      - #ABOUT
+    -->
+
+    <section class="section about" id="about" aria-label="about">
+      <div class="container">
+
+        <h2 class="section-title">Woodex Store</h2>
+
+        <p class="section-text">
+          When you start with a portrait and search for a pure form, a clear volume, through successive eliminations,
+          you arrive
+          inevitably at the egg. Likewise, starting with the egg and following the same process in reverse, one
+          finishes with the
+          portrait.
+        </p>
+
+        <div class="about-card">
+          <figure class="card-banner img-holder" style="--width: 1170; --height: 450;">
+            <img src="./assets/images/about-banner.jpg" width="1170" height="450" loading="lazy" alt="Woodex promo"
+              class="img-cover">
+          </figure>
+
+          <button class="play-btn" aria-label="play video">
+            <ion-icon name="play-circle-outline" aria-hidden="true"></ion-icon>
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+
+    <!-- 
+      - #PRODUCTS
+    -->
+
+    <section class="section product" id="product" aria-label="product">
+      <div class="container">
+
+        <div class="title-wrapper">
+          <h2 class="h2 section-title">Popular Products</h2>
+
+          <ul class="filter-btn-list">
+
+            <li class="filter-btn-item">
+              <button class="filter-btn active" data-filter-btn="all">All Products</button>
+            </li>
+
+            <li class="filter-btn-item">
+              <button class="filter-btn" data-filter-btn="accessory">Accessory</button>
+            </li>
+
+            <li class="filter-btn-item">
+              <button class="filter-btn" data-filter-btn="decoration">Decoration</button>
+            </li>
+
+            <li class="filter-btn-item">
+              <button class="filter-btn" data-filter-btn="furniture">Furniture</button>
+            </li>
+
+          </ul>
+        </div>
+
+        <ul class="grid-list product-list" data-filter="all">
+
+          <li class="decoration">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-1.jpg" width="300" height="300" loading="lazy"
+                  alt="Animi Dolor Pariatur" class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+
+                <ul class="badge-list">
+
+                  <li>
+                    <div class="badge orange">Sale</div>
+                  </li>
+
+                  <li>
+                    <div class="badge cyan">-10%</div>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Animi Dolor Pariatur</a>
+                </h3>
+
+                <div class="card-price">
+                  <del class="del">$19.00</del>
+
+                  <data class="price" value="10">$10.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="accessory">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-2.jpg" width="300" height="300" loading="lazy" alt="Art Deco Home"
+                  class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+
+                <div class="card-badge">Out of Stock</div>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Art Deco Home</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="30">$30.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="decoration">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-3.jpg" width="300" height="300" loading="lazy"
+                  alt="Artificial potted plant" class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Artificial potted plant</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="40">$40.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="accessory">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-4.jpg" width="300" height="300" loading="lazy" alt="Dark Green Jug"
+                  class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Dark Green Jug</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="17.10">$17.10</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="accessory">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-5.jpg" width="300" height="300" loading="lazy"
+                  alt="Drinking Glasses" class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Drinking Glasses</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="21">$21.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="furniture">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-6.jpg" width="300" height="300" loading="lazy" alt="Helen Chair"
+                  class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Helen Chair</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="69.50">$69.50</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="accessory">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-7.jpg" width="300" height="300" loading="lazy"
+                  alt="High Quality Glass Bottle" class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">High Quality Glass Bottle</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="30.10">$30.10</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="accessory">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-8.jpg" width="300" height="300" loading="lazy"
+                  alt="Living Room & Bedroom Lights" class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Living Room & Bedroom Lights</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="45">$45.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="furniture">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-9.jpg" width="300" height="300" loading="lazy" alt="Nancy Chair"
+                  class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Nancy Chair</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="90">$90.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="furniture">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-10.jpg" width="300" height="300" loading="lazy" alt="Simple Chair"
+                  class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Simple Chair</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="40">$40.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="decoration">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-11.jpg" width="300" height="300" loading="lazy" alt="Smooth Disk"
+                  class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Smooth Disk</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="46">$46.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="furniture">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-12.jpg" width="300" height="300" loading="lazy" alt="Table Black"
+                  class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Table Black</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="67">$67.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="furniture">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-13.jpg" width="300" height="300" loading="lazy"
+                  alt="Table Wood Pine" class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Table Wood Pine</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="50">$50.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="accessory">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-14.jpg" width="300" height="300" loading="lazy"
+                  alt="Teapot with black tea" class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Teapot with black tea</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="25">$25.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="decoration">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-15.jpg" width="300" height="300" loading="lazy"
+                  alt="Unique Decoration" class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Unique Decoration</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="15">$15.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="decoration">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-16.jpg" width="300" height="300" loading="lazy"
+                  alt="Vase Of Flowers" class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Vase Of Flowers</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="77">$77.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="decoration">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-17.jpg" width="300" height="300" loading="lazy" alt="Wood Eggs"
+                  class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Wood Eggs</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="19">$19.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="decoration">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-18.jpg" width="300" height="300" loading="lazy" alt="Wooden Box"
+                  class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Wooden Box</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="27">$27.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+          <li class="accessory">
+            <div class="product-card">
+
+              <a href="#" class="card-banner img-holder has-before" style="--width: 300; --height: 300;">
+                <img src="./assets/images/product-19.jpg" width="300" height="300" loading="lazy" alt="Wooden Cups"
+                  class="img-cover">
+
+                <ul class="card-action-list">
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to cart" title="add to cart">
+                      <ion-icon name="bag-handle-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                  <li>
+                    <button class="card-action-btn" aria-label="add to whishlist" title="add to whishlist">
+                      <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    </button>
+                  </li>
+
+                </ul>
+              </a>
+
+              <div class="card-content">
+                <h3 class="h3">
+                  <a href="#" class="card-title">Wooden Cups</a>
+                </h3>
+
+                <div class="card-price">
+                  <data class="price" value="29">$29.00</data>
+                </div>
+              </div>
+
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+
+
+
+    <!-- 
+      - #BLOG
+    -->
+
+    <section class="section blog" id="blog" aria-label="blog">
+      <div class="container">
+
+        <div class="title-wrapper">
+          <h2 class="h2 section-title">Explore our blog</h2>
+
+          <a href="#" class="btn-link">
+            <span class="span">View All</span>
+
+            <ion-icon name="arrow-forward" aria-hidden="true"></ion-icon>
+          </a>
+        </div>
+
+        <ul class="grid-list">
+
+          <li>
+            <div class="blog-card">
+
+              <div class="card-banner img-holder" style="--width: 374; --height: 243;">
+                <img src="./assets/images/blog-1.jpg" width="374" height="243" loading="lazy"
+                  alt="Unique products that will impress your home in 2022." class="img-cover">
+
+                <a href="#" class="card-btn">
+                  <span class="span">Read more</span>
+
+                  <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+
+              <div class="card-content">
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Unique products that will impress your home in 2022.</a>
+                </h3>
+
+                <ul class="card-meta-list">
+
+                  <li class="card-meta-item">
+                    <time class="card-meta-text" datetime="2022-09-27">November 27, 2022</time>
+                  </li>
+
+                  <li class="card-meta-item">
+                    <a href="#" class="card-meta-text">Admin</a>
+                  </li>
+
+                  <li class="card-meta-item">
+                    in <a href="#" class="card-meta-text">deco</a>
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+          </li>
+
+          <li>
+            <div class="blog-card">
+
+              <div class="card-banner img-holder" style="--width: 374; --height: 243;">
+                <img src="./assets/images/blog-2.jpg" width="374" height="243" loading="lazy"
+                  alt="Navy Blue & White Striped Area Rugs" class="img-cover">
+
+                <a href="#" class="card-btn">
+                  <span class="span">Read more</span>
+
+                  <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+
+              <div class="card-content">
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Navy Blue & White Striped Area Rugs</a>
+                </h3>
+
+                <ul class="card-meta-list">
+
+                  <li class="card-meta-item">
+                    <time class="card-meta-text" datetime="2022-09-25">November 25, 2022</time>
+                  </li>
+
+                  <li class="card-meta-item">
+                    <a href="#" class="card-meta-text">Admin</a>
+                  </li>
+
+                  <li class="card-meta-item">
+                    in <a href="#" class="card-meta-text">deco</a>
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+          </li>
+
+          <li>
+            <div class="blog-card">
+
+              <div class="card-banner img-holder" style="--width: 374; --height: 243;">
+                <img src="./assets/images/blog-3.jpg" width="374" height="243" loading="lazy"
+                  alt="Woodex White Coated Staircase Floating" class="img-cover">
+
+                <a href="#" class="card-btn">
+                  <span class="span">Read more</span>
+
+                  <ion-icon name="add-outline" aria-hidden="true"></ion-icon>
+                </a>
+              </div>
+
+              <div class="card-content">
+
+                <h3 class="h3">
+                  <a href="#" class="card-title">Woodex White Coated Staircase Floating</a>
+                </h3>
+
+                <ul class="card-meta-list">
+
+                  <li class="card-meta-item">
+                    <time class="card-meta-text" datetime="2022-09-18">November 18, 2022</time>
+                  </li>
+
+                  <li class="card-meta-item">
+                    <a href="#" class="card-meta-text">Admin</a>
+                  </li>
+
+                  <li class="card-meta-item">
+                    in <a href="#" class="card-meta-text">deco</a>
+                  </li>
+
+                </ul>
+
+              </div>
+
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>

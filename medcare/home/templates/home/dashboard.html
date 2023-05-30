@@ -1,0 +1,515 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dashboard</title>
+        <meta name="description" content="">
+        <link rel="icon" type="image/x-icon" href="{% static 'logo.png' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- MDB -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            .carousel-item {
+                height: 50vh;
+              }
+          .card {
+           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          }
+          .footer-cta {
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+          }
+          .price {
+            color: #263238;
+            font-size: 24px;
+          }
+          
+          .card-title {
+          color:#263238
+          }
+          
+          .sale {
+            color: #E53935
+          }
+          
+          .sale-badge {
+            background-color: #E53935
+          }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+    <!-- Container wrapper -->
+    <div class="container">    
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent1"
+        aria-controls="navbarSupportedContent1"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent1">      
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-sm-0" href="{% url 'dashboard' %}">
+          <img
+            src="{% static 'logo.png' %}"
+            height="20"
+            alt="MDB Logo"
+            loading="lazy"
+          />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link " href="{% url 'dashboard' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'dashboard' %}">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#add_medicine">Add Medicine</a>
+          </li>
+          {% comment %} <li class="nav-item">
+            <a class="nav-link" href="https://mdbootstrap.com/education/bootstrap/">Free tutorials</a>
+          </li> {% endcomment %}
+        </ul>
+        <!-- Left links -->      
+      </div>
+      <!-- Collapsible wrapper -->
+      
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+        <a class="nav-link me-3" href="#">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="badge rounded-pill badge-notification bg-danger">1</span>
+        </a>
+  
+        <a class="nav-link me-3" href="#">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a class="nav-link me-3" href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="border rounded px-2 nav-link"
+                target="_blank">
+                <i class="fab fa-person me-2"></i>Profile
+              </a>
+      </div>
+      <!-- Right elements -->
+      
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+  
+  <!-- carousel -->
+  <div id="carouselExampleCaptions" class="carousel slide carousel-fade" data-mdb-ride="carousel">
+    <div class="carousel-indicators">
+      <button
+        type="button"
+        data-mdb-target="#carouselExampleCaptions"
+        data-mdb-slide-to="0"
+        class="active"
+        aria-current="true"
+        aria-label="Slide 1"
+      ></button>
+      <button
+        type="button"
+        data-mdb-target="#carouselExampleCaptions"
+        data-mdb-slide-to="1"
+        aria-label="Slide 2"
+      ></button>
+      <button
+        type="button"
+        data-mdb-target="#carouselExampleCaptions"
+        data-mdb-slide-to="2"
+        aria-label="Slide 3"
+      ></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/8-col/img%282%29.jpg" class="d-block w-100" alt="Wild Landscape"/>
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)"></div>
+        <div class="carousel-caption d-none d-sm-block mb-5">
+          <h1 class="mb-4">
+                  <strong>Learn Bootstrap 5 with MDB</strong>
+                </h1>
+  
+                <p>
+                  <strong>Best & free guide of responsive web design</strong>
+                </p>
+  
+                <p class="mb-4 d-none d-md-block">
+                  <strong>The most comprehensive tutorial for the Bootstrap 5. Loved by over 3 000 000 users. Video and written versions
+                    available. Create your own, stunning website.</strong>
+                </p>
+  
+                <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start free tutorial
+                  <i class="fas fa-graduation-cap ms-2"></i>
+                </a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/8-col/img%283%29.jpg" class="d-block w-100" alt="Camera"/>
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)"></div>
+        <div class="carousel-caption d-none d-md-block mb-5">
+          <h1 class="mb-4">
+                  <strong>Learn Bootstrap 5 with MDB</strong>
+                </h1>
+  
+                <p>
+                  <strong>Best & free guide of responsive web design</strong>
+                </p>
+  
+                <p class="mb-4 d-none d-md-block">
+                  <strong>The most comprehensive tutorial for the Bootstrap 5. Loved by over 3 000 000 users. Video and written versions
+                    available. Create your own, stunning website.</strong>
+                </p>
+  
+                <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start free tutorial
+                  <i class="fas fa-graduation-cap ms-2"></i>
+                </a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/8-col/img%285%29.jpg" class="d-block w-100" alt="Exotic Fruits"/>
+        <div class="mask" style="background-color: rgba(0, 0, 0, 0.4)"></div>
+        <div class="carousel-caption d-none d-md-block mb-5">
+          <h1 class="mb-4">
+                  <strong>Learn Bootstrap 5 with MDB</strong>
+                </h1>
+  
+                <p>
+                  <strong>Best & free guide of responsive web design</strong>
+                </p>
+  
+                <p class="mb-4 d-none d-md-block">
+                  <strong>The most comprehensive tutorial for the Bootstrap 5. Loved by over 3 000 000 users. Video and written versions
+                    available. Create your own, stunning website.</strong>
+                </p>
+  
+                <a target="_blank" href="https://mdbootstrap.com/education/bootstrap/" class="btn btn-outline-white btn-lg">Start free tutorial
+                  <i class="fas fa-graduation-cap ms-2"></i>
+                </a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-mdb-target="#carouselExampleCaptions" data-mdb-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  
+   <!--Main layout-->
+  <main>
+  <div class="container">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark mt-3 mb-5 shadow p-2" style="background-color: #607D8B">
+      <!-- Container wrapper -->
+      <div class="container-fluid">  
+      <!-- Navbar brand -->
+      <a class="navbar-brand" href="#">Categories:</a>
+  
+      <!-- Toggle button -->
+      <button 
+         class="navbar-toggler" 
+         type="button" 
+         data-mdb-toggle="collapse" 
+         data-mdb-target="#navbarSupportedContent2" 
+         aria-controls="navbarSupportedContent2" 
+         aria-expanded="false" 
+         aria-label="Toggle navigation">
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+  
+          <!-- Link -->
+          <li class="nav-item acitve">
+            <a class="nav-link text-white" href="#">All types</a>
+          </li>
+          <li class="nav-item">
+                <a class="nav-link text-white" href="#">A Medicine</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">B Medicine</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">C Medicine</a>
+              </li>
+  
+        </ul>
+  
+        <!-- Search -->
+        <form class="w-auto py-1" style="max-width: 12rem">
+          <input type="search" class="form-control rounded-0" placeholder="Search" aria-label="Search">
+        </form>
+  
+      </div>
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->
+  <h5 style="color: red; font-size:18px">
+    {% for message in messages %}
+        <li {% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+    {% endfor %}
+  </h5>  
+  <!-- Products -->
+    <section>
+    <div class="text-center">
+      <div class="row">
+        {% for allmed in med %}
+          <div class="col-lg-3 col-md-6 mb-4">
+            <div class="card">
+              <div class="bg-image hover-zoom ripple ripple-surface ripple-surface-light"
+                data-mdb-ripple-color="light">
+                <img src="https://mdbootstrap.com/img/Photos/Horizontal/E-commerce/Vertical/12.jpg"
+                  class="w-100" />
+                <a href="#!">
+                  <div class="mask">
+                    <div class="d-flex justify-content-start align-items-end h-100">
+                      <h5><span class="badge bg-dark ms-2">{{allmed.quantity}}</span></h5>
+                    </div>
+                  </div>
+                  <div class="hover-overlay">
+                    <div class="mask" style="background-color: rgba(251, 251, 251, 0.15);"></div>
+                  </div>
+                </a>
+              </div>
+              <div class="card-body">
+                <a href="" class="text-reset">
+                  <h5 class="card-title mb-2">{{allmed.name}}</h5>
+                </a>
+                <a href="" class="text-reset ">
+                  <p>{{allmed.description}}</p>
+                </a>
+                <h6 class="mb-3 price">{{allmed.price}} Rs</h6>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+    
+  <!-- Pagination -->
+    <nav aria-label="Page navigation example" class="d-flex justify-content-center mt-3">
+    <ul class="pagination">
+      <li class="page-item disabled">
+        <a class="page-link" href="#" aria-label="Previous">
+          <span aria-hidden="true">&laquo;</span>
+        </a>
+      </li>
+      <li class="page-item active"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+      <li class="page-item"><a class="page-link" href="#">4</a></li>
+      <li class="page-item"><a class="page-link" href="#">5</a></li>
+      <li class="page-item">
+        <a class="page-link" href="#" aria-label="Next">
+          <span aria-hidden="true">&raquo;</span>
+        </a>
+      </li>
+    </ul>
+  </nav>  
+  <!-- Pagination -->  
+  </div>
+  </main>
+   <!--Main layout-->
+  
+  <footer class="text-center text-white mt-4" style="background-color: #607D8B">
+    
+    <!--Call to action-->
+      {% comment %} <div class="pt-4 pb-2">
+        <a class="btn btn-outline-white footer-cta mx-2" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank" role="button">Download MDB
+          <i class="fas fa-download ms-2"></i>
+        </a>
+        <a class="btn btn-outline-white footer-cta mx-2" href="https://mdbootstrap.com/education/bootstrap/" target="_blank" role="button">Start free tutorial
+          <i class="fas fa-graduation-cap ms-2"></i>
+        </a>
+      </div> {% endcomment %}
+      <!--/.Call to action-->
+    
+    <hr class="text-dark">
+    
+    <div class="container">
+      <!-- Section: Social media -->
+      <section class="mb-3">
+        
+        <!-- Facebook -->
+        <a
+          class="btn-link btn-floating btn-lg text-white"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          class="btn-link btn-floating btn-lg text-white"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a
+          class="btn-link btn-floating btn-lg text-white"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn-link btn-floating btn-lg text-white"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- YouTube -->
+        <a
+          class="btn-link btn-floating btn-lg text-white"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <!-- Github -->
+        <a
+          class="btn-link btn-floating btn-lg text-white"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); text-color: #E0E0E0">
+      © 2023 Copyright:
+      <a class="text-white" href="https://mayankaggarwal.live">mayankaggarwal</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+        <!-- MDB -->
+        <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="" async defer></script>
+    </body>
+    {% comment %} Add medicine modal {% endcomment %}
+  <div class="modal fade mymodal" id="add_medicine" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Add Medicine</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form action="{% url 'add_med' %}" method="POST" enctype="multipart/form-data">
+              {% csrf_token %}
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                  <input type="text" name="medicine_name" id="form1Example1" class="form-control" />
+                  <label class="form-label" for="form1Example1">Name of Medicine</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="date" name="medicine_expire" id="form1Example1" class="form-control" />
+                  <label class="form-label" for="form1Example1">Expire Date of Medicine</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="text" name="medicine_price" id="form1Example1" class="form-control" />
+                  <label class="form-label" for="form1Example1">Price of Medicine</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="text" name="medicine_quantity" id="form1Example1" class="form-control" />
+                  <label class="form-label" for="form1Example1">Quantity of Medicine</label>
+                </div>
+                <div class="form-outline mb-4">
+                  <input type="text" name="medicine_description" id="form1Example1" class="form-control" />
+                  <label class="form-label" for="form1Example1">Description of Medicine</label>
+                </div>
+                {% comment %} <div class="form-outline mb-4">
+                    <input type="text" name="medicine_type" id="form1Example1" class="form-control" />
+                    <label class="form-label" for="form1Example1">Type of Medicine</label>
+                </div> {% endcomment %}
+                <div class="form-outline mb-4">
+                    {% comment %} <input type="text" name="medicine_type" id="form1Example1" class="form-control" /> {% endcomment %}
+                    {% comment %} <label class="form-label form-control" for="form1Example1">Type of Medicine</label> {% endcomment %}
+                    <select class="form-label btn btn-group shadow-0" name="medicine_type" id="ddlViewBy">
+                        <option class="dropdown-item" value="0">Type of Medicine</option>
+                        <option class="dropdown-item" value="1">Type-A</option>
+                        <option class="dropdown-item" value="2">Type-B</option>
+                        <option class="dropdown-item" value="3">Type-C</option>
+                    </select>
+                </div>
+              
+                <!-- 2 column grid layout for inline styling -->
+                {% comment %} <div class="row mb-4">
+                  <div class="col d-flex justify-content-center">
+                    <!-- Checkbox -->
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
+                      <label class="form-check-label" for="form1Example3"> Remember me </label>
+                    </div>
+                  </div>
+              
+                  <div class="col">
+                    <!-- Simple link -->
+                    <a href="#!">Forgot password?</a>
+                  </div>
+                </div> {% endcomment %}
+              
+                <!-- Submit button -->
+                <button type="submit" class="btn btn-primary btn-block">Confirm</button>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</html>

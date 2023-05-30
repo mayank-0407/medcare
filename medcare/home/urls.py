@@ -10,5 +10,8 @@ urlpatterns = [
     path('signin/', views.signin,name="signin"),  
     path('signup/', views.signup,name="signup"),  
     path('signout/', views.signout,name="signout"),  
+    path('dashboard/', views.dashboard,name="dashboard"),  
+    path('dashboard/add', views.addmedicine,name="add_med"),  
+    path('dashboard/des', views.viewmed,name="view_med"),   
     
 ]

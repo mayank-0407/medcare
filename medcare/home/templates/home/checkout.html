@@ -1,0 +1,463 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Dashboard</title>
+        <meta name="description" content="">
+        <link rel="icon" type="image/x-icon" href="{% static 'logo.png' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+            rel="stylesheet"
+        />
+        <!-- Google Fonts -->
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+            rel="stylesheet"
+        />
+        <!-- MDB -->
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.css"
+            rel="stylesheet"
+        />
+        <style>
+            .carousel-item {
+                height: 50vh;
+              }
+          .card {
+           box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+          }
+          .footer-cta {
+            box-shadow: rgba(0, 0, 0, 0.15) 0px 5px 15px;
+          }
+          .price {
+            color: #263238;
+            font-size: 24px;
+          }
+          
+          .card-title {
+          color:#263238
+          }
+          
+          .sale {
+            color: #E53935
+          }
+          
+          .sale-badge {
+            background-color: #E53935
+          }
+        </style>
+    </head>
+    <body>
+        <!-- Navbar -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-light bg-white">
+    <!-- Container wrapper -->
+    <div class="container">    
+      <!-- Toggle button -->
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-mdb-toggle="collapse"
+        data-mdb-target="#navbarSupportedContent1"
+        aria-controls="navbarSupportedContent1"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <i class="fas fa-bars"></i>
+      </button>
+  
+      <!-- Collapsible wrapper -->
+      <div class="collapse navbar-collapse" id="navbarSupportedContent1">      
+        <!-- Navbar brand -->
+        <a class="navbar-brand mt-2 mt-sm-0" href="{% url 'dashboard' %}">
+          <img
+            src="{% static 'logo.png' %}"
+            height="20"
+            alt="MDB Logo"
+            loading="lazy"
+          />
+        </a>
+        <!-- Left links -->
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item active">
+            <a class="nav-link " href="{% url 'dashboard' %}">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'dashboard' %}">About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{% url 'dashboard' %}">Add Medicine</a>
+          </li>
+          {% comment %} <li class="nav-item">
+            <a class="nav-link" href="https://mdbootstrap.com/education/bootstrap/">Free tutorials</a>
+          </li> {% endcomment %}
+        </ul>
+        <!-- Left links -->      
+      </div>
+      <!-- Collapsible wrapper -->
+      
+      <!-- Right elements -->
+      <div class="d-flex align-items-center">
+        <!-- Icon -->
+        <a class="nav-link me-3" href="#">
+          <i class="fas fa-shopping-cart"></i>
+          <span class="badge rounded-pill badge-notification bg-danger">1</span>
+        </a>
+  
+        <a class="nav-link me-3" href="#">
+          <i class="fab fa-facebook-f"></i>
+        </a>
+        <a class="nav-link me-3" href="#">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://github.com/mdbootstrap/bootstrap-material-design" class="border rounded px-2 nav-link"
+                target="_blank">
+                <i class="fab fa-person me-2"></i>Profile
+              </a>
+      </div>
+      <!-- Right elements -->
+      
+    </div>
+    <!-- Container wrapper -->
+  </nav>
+  <!-- Navbar -->  
+  <main class="mt-5 pt-4">
+    <div class="container">
+        <!-- Heading -->
+        <h2 class="my-5 text-center">Checkout form</h2>
+
+        <!--Grid row-->
+        <div class="row">
+            <!--Grid column-->
+            <div class="col-md-8 mb-4">
+                <!--Card-->
+                <div class="card p-4">
+                    <!--Grid row-->
+                    <div class="row mb-3">
+                        <!--Grid column-->
+                        <div class="col-md-6 mb-2">
+                            <!--firstName-->
+                            <div class="form-outline">
+                                <input type="text" id="typeText" class="form-control" />
+                                <label class="form-label" for="typeText">First name</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-md-6 mb-2">
+                            <!--lastName-->
+                            <div class="form-outline">
+                                <input type="text" id="typeText" class="form-control" />
+                                <label class="form-label" for="typeText">Last name</label>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+
+                    <!--Username-->
+                    <div class="input-group mb-4">
+                        <span class="input-group-text" id="basic-addon1">@</span>
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" />
+                    </div>
+
+                    <!--email-->
+                    <p class="mb-0">
+                        Email (optional)
+                    </p>
+                    <div class="form-outline mb-4">
+                         <input type="email" class="form-control" placeholder="youremail@example.com" aria-label="youremail@example.com" aria-describedby="basic-addon1" />
+                    </div>
+
+                    <!--address-->
+                    <p class="mb-0">
+                        Address
+                    </p>
+                    <div class="form-outline mb-4">
+                        <input type="email" class="form-control" placeholder="1234 Main St" aria-label="1234 Main St" aria-describedby="basic-addon1" />
+                    </div>
+
+                    <!--address-2-->
+                    <p class="mb-0">
+                        Address 2 (optional)
+                    </p>
+                    <div class="form-outline mb-4">
+                        <input type="email" class="form-control" placeholder="Apartment or suite" aria-label="Apartment or suite" aria-describedby="basic-addon1" />
+                    </div>
+
+                    <!--Grid row-->
+                    <div class="row">
+                        <!--Grid column-->
+                        <div class="col-lg-4 col-md-12 mb-4">
+                            <p class="mb-0">
+                                Country
+                            </p>
+                            <div class="form-outline mb-4">
+                        <input type="email" class="form-control" placeholder="United States" aria-label="United States" aria-describedby="basic-addon1" />
+                    </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-4 col-md-12 mb-4">
+                            <p class="mb-0">
+                                State
+                            </p>
+                            <div class="form-outline mb-4">
+                        <input type="email" class="form-control" placeholder="California" aria-label="California" aria-describedby="basic-addon1" />
+                    </div>
+                        </div>
+                        <!--Grid column-->
+
+                        <!--Grid column-->
+                        <div class="col-lg-4 col-md-12 mb-4">
+                            <p class="mb-0">
+                                Zip
+                            </p>
+                            <div class="form-outline">
+                                <input type="text" class="form-control"/>
+                            </div>
+                        </div>
+                        <!--Grid column-->
+                    </div>
+                    <!--Grid row-->
+
+                    <hr />
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <label class="form-check-label" for="flexCheckDefault">Shipping address is the same as my billing address</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                        <label class="form-check-label" for="flexCheckDefault">Save this information for next time</label>
+                    </div>
+
+                    <hr />
+
+                    <div class="my-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked />
+                            <label class="form-check-label" for="flexRadioDefault1"> Credit card </label>
+                        </div>
+
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" />
+                            <label class="form-check-label" for="flexRadioDefault2"> Debit card </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault3" />
+                            <label class="form-check-label" for="flexRadioDefault3"> Paypal </label>
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <div class="col-md-6 mb-3">
+                            <p class="mb-0">
+                                Name on card
+                            </p>
+                            <div class="form-outline">
+                                <input type="text" class="form-control"/>
+                                <div class="form-helper">Full name as displayed on card</div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <p class="mb-0">
+                                Credit card number
+                            </p>
+                            <div class="form-outline">
+                                <input type="text" class="form-control" />                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-3 mb-3">
+                            <p class="mb-0">
+                                Expiration
+                            </p>
+                            <div class="form-outline">
+                                <input type="text" class="form-control" />
+                                
+                            </div>
+                        </div>
+                        <div class="col-md-3 mb-3">
+                            <p class="mb-0">
+                                CVV
+                            </p>
+                            <div class="form-outline">
+                                <input type="text" class="form-control" />
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <hr class="mb-4" />                    
+                  <button class="btn btn-primary" type="button">Continue to checkout</button>
+                </div>
+                <!--/.Card-->
+            </div>
+            <!--Grid column-->
+
+            <!--Grid column-->
+            <div class="col-md-4 mb-4">
+                <!-- Heading -->
+                <h4 class="d-flex justify-content-between align-items-center mb-3">
+                    <span class="text-muted">Your cart</span>
+                    <span class="badge rounded-pill badge-primary">3</span>
+                </h4>
+
+                <!-- Cart -->
+                <ul class="list-group mb-3">
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div>
+                            <h6 class="my-0">Product name</h6>
+                            <small class="text-muted">Brief description</small>
+                        </div>
+                        <span class="text-muted">$12</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div>
+                            <h6 class="my-0">Second product</h6>
+                            <small class="text-muted">Brief description</small>
+                        </div>
+                        <span class="text-muted">$8</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <div>
+                            <h6 class="my-0">Third item</h6>
+                            <small class="text-muted">Brief description</small>
+                        </div>
+                        <span class="text-muted">$5</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between bg-light">
+                        <div class="text-success">
+                            <h6 class="my-0">Promo code</h6>
+                            <small>EXAMPLECODE</small>
+                        </div>
+                        <span class="text-success">-$5</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between">
+                        <span>Total (USD)</span>
+                        <strong>$20</strong>
+                    </li>
+                </ul>
+                <!-- Cart -->
+
+                <!-- Promo code -->
+                <form class="card p-2">
+                    <div class="input-group mb-3">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Promo code"
+    aria-label="Promo code"
+    aria-describedby="button-addon2"
+  />
+  <button class="btn btn-primary" type="button" id="button-addon2" data-mdb-ripple-color="dark">
+    redeem
+  </button>
+</div>
+                </form>
+                <!-- Promo code -->
+            </div>
+            <!--Grid column-->
+        </div>
+        <!--Grid row-->
+    </div>
+</main>
+  
+  <footer class="text-center text-white mt-4" style="background-color: #607D8B">
+    
+    <!--Call to action-->
+      {% comment %} <div class="pt-4 pb-2">
+        <a class="btn btn-outline-white footer-cta mx-2" href="https://mdbootstrap.com/docs/jquery/getting-started/download/" target="_blank" role="button">Download MDB
+          <i class="fas fa-download ms-2"></i>
+        </a>
+        <a class="btn btn-outline-white footer-cta mx-2" href="https://mdbootstrap.com/education/bootstrap/" target="_blank" role="button">Start free tutorial
+          <i class="fas fa-graduation-cap ms-2"></i>
+        </a>
+      </div> {% endcomment %}
+      <!--/.Call to action-->
+    
+    <hr class="text-dark">
+    
+    <div class="container">
+      <!-- Section: Social media -->
+      <section class="mb-3">
+        
+        <!-- Facebook -->
+        <a
+          class="btn-link btn-floating btn-lg text-white"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-facebook-f"></i
+        ></a>
+  
+        <!-- Twitter -->
+        <a
+          class="btn-link btn-floating btn-lg text-white"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-twitter"></i
+        ></a>
+  
+        <!-- Google -->
+        <a
+          class="btn-link btn-floating btn-lg text-white"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-google"></i
+        ></a>
+  
+        <!-- Instagram -->
+        <a
+          class="btn-link btn-floating btn-lg text-white"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-instagram"></i
+        ></a>
+  
+        <!-- YouTube -->
+        <a
+          class="btn-link btn-floating btn-lg text-white"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-youtube"></i
+        ></a>
+        <!-- Github -->
+        <a
+          class="btn-link btn-floating btn-lg text-white"
+          href="#!"
+          role="button"
+          data-mdb-ripple-color="dark"
+          ><i class="fab fa-github"></i
+        ></a>
+      </section>
+      <!-- Section: Social media -->
+    </div>
+    <!-- Grid container -->
+  
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2); text-color: #E0E0E0">
+      © 2023 Copyright:
+      <a class="text-white" href="https://mayankaggarwal.live">mayankaggarwal</a>
+    </div>
+    <!-- Copyright -->
+  </footer>
+        <!-- MDB -->
+        <script
+        type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.3.1/mdb.min.js"
+        ></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="" async defer></script>
+    </body>
+</html>

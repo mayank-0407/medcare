@@ -14,14 +14,23 @@ def temp(request):
     return render(request,"home/temp.html")
 
 def vhome(request):
-    if not request.user.is_authenticated:
-        return render(request,"home/home.html")
-
     if request.user.is_superuser:
         return redirect('admin')
 
     if request.user.is_staff:
-        return redirect('staffdashboard')     
+        return redirect('staffdashboard')  
+
+    if request.user.is_active:
+        return redirect('dashboard')
+
+    return render(request,"home/home.html")
+
+def dashboard(request):
+    if request.user.is_authenticated:
+        allmed=Medicine.objects.all()
+        return render(request,"home/dashboard.html",context={'med':allmed})
+    return redirect('home')
+
 def my_admin(request):
     url=settings.BASE_URL_EMAIL+"/admin"
     response=redirect(url)
@@ -46,7 +55,7 @@ def signin(request):
         try:
             tempuser=User.objects.get(email=email).username                  
             user=authenticate(request,username=tempuser,password=pass1)
-            # print(user)
+            print(user)
         except:
             try:
                 User.objects.get(username=email)
@@ -60,7 +69,8 @@ def signin(request):
         if user == None: 
             messages.error(request, 'Error - No User Exists.')
             return redirect('signin')
-        if user.is_superuser == True:
+        if user.is_active == True:
+            login(request,user)
             return redirect('home')
         else:
             messages.error(request, 'Error - You dont have permission to login.')
@@ -93,7 +103,7 @@ def signup(request):
         except:
             pass
 
-        myuser=User.objects.create_user(username=username,email=email)
+        myuser=User.objects.create_user(username=username,email=email,first_name=name)
         myuser.set_password(pass1)
         myuser.save()
 
@@ -112,3 +122,35 @@ def signout(request):
     logout(request)
     return redirect('home')
 
+def viewmed(request):
+    if request.user.is_authenticated:
+        return render(request,"home/add_med.html")
+    return redirect('home')
+
+def addmedicine(request):
+    if request.user.is_authenticated:
+        if request.method=="POST":
+            name= request.POST.get('medicine_name')
+            exp_date= request.POST.get('medicine_expire')
+            price= request.POST.get('medicine_price')
+            quantity= request.POST.get('medicine_quantity')
+            description= request.POST.get('medicine_description')
+            med_type= request.POST.get('medicine_type')
+
+            try:
+                mycustomer=Customer.objects.get(user=request.user)
+                mytype=MedType.objects.get(code=med_type)
+                med=Medicine.objects.create(mycustomer=mycustomer,
+                                            name=name,
+                                            expire_date=exp_date,
+                                            price=price,
+                                            quantity=quantity,
+                                            description=description,
+                                            type=mytype)
+                print('added')
+                messages.success(request,'Successfully Added Medcinine')
+                med.save()
+            except:
+                messages.error(request, 'Error - Something went wrong.')
+        return render(request,"home/dashboard.html")
+    return redirect('home')

@@ -128,3 +128,7 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 BASE_URL_EMAIL='http://127.0.0.1:8000/'
+
+MED_TYPE_A_CODE=1
+MED_TYPE_B_CODE=2
+MED_TYPE_C_CODE=3
